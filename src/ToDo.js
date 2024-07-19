@@ -44,7 +44,7 @@ function ListOfGoals({ allGoals, onRemove }) {
   const handleRemove = (goal) => {
     onRemove(goal);
   };
-  
+
   return (
     <>
     <div className="goal-list">
