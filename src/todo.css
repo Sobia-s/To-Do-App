@@ -1,20 +1,21 @@
 body {
   background-color: #098cff;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .to-do {
   max-width: 600px;
-  margin: 20px auto;
+  margin: 5rem auto;
   padding: 20px;
   background-color: #f4f9fc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.goal-form, .goal-list {
+.goal-form,
+.goal-list {
   margin-bottom: 20px;
 }
 
@@ -84,15 +85,16 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 600px) {
   .to-do {
-      padding: 10px;
+    padding: 10px;
   }
 
-  input[type="text"], button {
-      font-size: 0.9rem;
-      padding: 8px;
+  input[type="text"],
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 
   h2 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
