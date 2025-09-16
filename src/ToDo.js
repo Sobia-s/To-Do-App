@@ -29,7 +29,7 @@ function GoalForm({ onAdd }) {
         <input
           type="text"
           name="by"
-          placeholder="By..."
+          placeholder="By date"
           value={formData.by}
           onChange={handleChange}
           required
@@ -47,17 +47,19 @@ function ListOfGoals({ allGoals, onRemove }) {
 
   return (
     <>
-    <div className="goal-list">
-      <h2>My Goals</h2>
-      <ul>
-        {allGoals.map((goal) => (
-          <li key={goal.id}>
-            <span>My goal is to {goal.goal}, by {goal.by}</span>
-            <button onClick={() => handleRemove(goal)}>Remove</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="goal-list">
+        <h2>My Goals</h2>
+        <ul>
+          {allGoals.map((goal) => (
+            <li key={goal.id}>
+              <span>
+                My goal is to {goal.goal}, by {goal.by}
+              </span>
+              <button onClick={() => handleRemove(goal)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
@@ -77,10 +79,10 @@ export default function ToDoApp() {
 
   return (
     <>
-    <div className="to-do">
-      <GoalForm onAdd={addGoal} />
-      <ListOfGoals allGoals={allGoals} onRemove={removeGoal} />
-    </div>
+      <div className="to-do">
+        <GoalForm onAdd={addGoal} />
+        <ListOfGoals allGoals={allGoals} onRemove={removeGoal} />
+      </div>
     </>
   );
 }
